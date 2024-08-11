@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>TODO LIST</h2>
+    <h3>Add Item</h3>
+    <div class="todo-form">
+        <div>Title</div>
+        <input id="new-task" type="text" [(ngModel)]="todoTitle">
+        <div>Description</div>
+        <input id="new-task" type="text" [(ngModel)]="todoDescription">
+    </div>
+    <div class="form-action">
+        <button type="button" (click)="newTodo()">Save</button>
+    </div>
+    <h3>Todo</h3>
+    <ul class="incomplete-tasks" *ngFor="let item of todoList$ | async">
+        <li>
+            <div class="todo-item">
+                <input type="checkbox" [checked]="item.completed" (change)="toggleTodo(item.id)">
+                <div class="todo-item-detail">
+                    <div style="font-weight: bold;" [ngClass]="{'mark-completed': item.completed}">{{item.title}}</div>
+                    <div [ngClass]="{'mark-completed': item.completed}">{{item.description}}</div>
+                </div>
+                <button class="delete" (click)="removeTodo(item.id)">Delete</button>
+            </div>
+        </li>
+    </ul>
+</div>
