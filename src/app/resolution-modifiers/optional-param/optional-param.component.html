@@ -1,0 +1,8 @@
+<h4>Optional Annotation</h4>
+<p>Prevents Null Injector Error If <strong>@Optional()</strong> annotation is given while creating instance in constructor for a service.</p>
+<ng-container *ngIf="result?.length != 0 ; else noProviders">
+    <strong>From : </strong>{{result[0]}} | <strong>Message: </strong>{{result[1]}}
+</ng-container>
+<ng-template #noProviders>
+    <strong>Failed : Service Not Injected </strong>
+</ng-template>

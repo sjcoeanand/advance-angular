@@ -61,6 +61,7 @@ label[for='new-task'] {
 
 input#new-task {
 	width: 100%;
+	height: 100%;
 }
 
 
@@ -102,20 +103,6 @@ li > .delete:hover {
 	color: #888;
 }
 
-
-/* Edit Task */
-
-ul li input[type=text] {
-	display: none;
-}
-
-ul li.editMode input[type=text] {
-	display: block;
-}
-
-ul li.editMode label {
-	display: none;
-}
 
 
 /////////////////custom scss///////////////////////

@@ -1,0 +1,13 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <section *ngFor="let item of postList; let i=index" [id]="'title'+(i+1)">
+                <h2>{{item.title.length > 15 ? item.title.substring(0, 15) : item.title}} <b>{{i+1}}</b></h2>
+                <p>{{item.body}}</p>
+            </section>
+        </div>
+    </div>
+    <div class="stickToBottom" >
+        <button (click)="scrollToTop()">Scroll to Top</button>
+    </div>
+</div>

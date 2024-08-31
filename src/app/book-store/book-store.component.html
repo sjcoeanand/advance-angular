@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 mt-2 " *ngFor="let item of postList">
+            <div class="card" style="width: 18rem;" >
+                <div class="card-body">
+                  <h5 class="card-title">{{item.title.length > 20 ? item.title.substring(0, 20) : item.title}}</h5>
+                  <p class="card-text">{{item.body.length > 50 ? item.body.substring(0, 50) : item.body}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+h2{
+    background-color: rgb(234, 242, 165);
+    padding: 10px;
+}
+
+.stickToBottom{
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    button{
+        background-color: yellowgreen;
+        border: 0px;
+        border-radius: 0px 10px 10px 10px ;
+        padding: 10px;
+
+    }
+}

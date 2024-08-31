@@ -1,11 +1,11 @@
 <div class="container">
     <h2>TODO LIST</h2>
     <h3>Add Item</h3>
-    <div class="todo-form">
+    <div class="todo-form input-group">
         <div>Title</div>
-        <input id="new-task" type="text" [(ngModel)]="todoTitle">
+        <input id="new-task" class="form-control" type="text" [(ngModel)]="todoTitle">
         <div>Description</div>
-        <input id="new-task" type="text" [(ngModel)]="todoDescription">
+        <input id="new-task" class="form-control" type="text" [(ngModel)]="todoDescription">
     </div>
     <div class="form-action">
         <button type="button" (click)="newTodo()">Save</button>

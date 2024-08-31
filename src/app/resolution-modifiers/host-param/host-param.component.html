@@ -1,0 +1,11 @@
+<h4>Host Annotation</h4>
+<div appParent > Parent Directive
+    <p appChild>Child Directive</p>
+</div>
+<p>It denotes that host element will be the last stop for searching providers, it means <strong>It wont look for host elements provider</strong> Every angular component has its own host element i.e. selector of that component. <strong>@Host()</strong> annotation is given while creating instance in constructor for a service.</p>
+<ng-container *ngIf="result?.length != 0 ; else noProviders">
+    <strong>From : </strong>{{result[0]}} | <strong>Message: </strong>{{result[1]}}
+</ng-container>
+<ng-template #noProviders>
+    <strong>Failed : Service Not Injected </strong>
+</ng-template>
