@@ -5,6 +5,7 @@ h2{
 
 .stickToBottom{
     position: fixed;
+    z-index: 2;
     bottom: 50px;
     right: 20px;
     button{

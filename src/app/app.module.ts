@@ -2,10 +2,11 @@ import { PercentagePipe } from './pipes/percentage.pipe';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from  '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodoRxjsComponent } from './todo-rxjs/todo-rxjs.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PipeLearningComponent } from './pipe-learning/pipe-learning.component';
 import { StudentService } from './services/student.service';
 import { FilterPipe } from './pipes/filter.pipe';
@@ -19,6 +20,7 @@ import { SelfParamComponent } from './resolution-modifiers/self-param/self-param
 import { HostParamComponent } from './resolution-modifiers/host-param/host-param.component';
 import { ParentDirective } from './resolution-modifiers/parent.directive';
 import { ChildDirective } from './resolution-modifiers/child.directive';
+import { SearchbarComponent } from './searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +38,15 @@ import { ChildDirective } from './resolution-modifiers/child.directive';
     SelfParamComponent,
     HostParamComponent,
     ParentDirective,
-    ChildDirective
+    ChildDirective,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [StudentService],
   bootstrap: [AppComponent]

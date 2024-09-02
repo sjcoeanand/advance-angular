@@ -6,7 +6,7 @@ import { TodoService } from '../services/todo.service';
 @Component({
   selector: 'app-todo-rxjs',
   templateUrl: './todo-rxjs.component.html',
-  styleUrls: ['./todo-rxjs.component.scss']
+  styleUrls: ['./todo-rxjs.component.scss'],
 })
 export class TodoRxjsComponent {
 
