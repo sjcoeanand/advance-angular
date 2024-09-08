@@ -21,6 +21,7 @@ import { HostParamComponent } from './resolution-modifiers/host-param/host-param
 import { ParentDirective } from './resolution-modifiers/parent.directive';
 import { ChildDirective } from './resolution-modifiers/child.directive';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     HostParamComponent,
     ParentDirective,
     ChildDirective,
-    SearchbarComponent
+    SearchbarComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,

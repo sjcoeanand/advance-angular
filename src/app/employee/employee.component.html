@@ -1,0 +1,32 @@
+<div class="container my-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form [formGroup]="employeeForm">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Employee Name</label>
+                  <input type="email" class="form-control" formControlName="empName" id="name" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="dept" class="form-label">Employee Department</label>
+                  <input type="text" class="form-control" id="dept" formControlName="empDept">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" formControlName="exEmployee" id="status">
+                  <label class="form-check-label" for="status">Ex-employee</label>
+                </div>
+                <div class="mb-3" formArrayName="empSkills">
+                    <h6>Add Skills</h6> 
+                    <button (click)="addSkills()" class="btn btn-primary mb-2">Add Skills</button>
+                    <div *ngFor="let item of empSkillsArray.controls; let i = index" >
+                       <div class="d-flex align-items-center mb-2" [formGroupName]="i">
+                            <label class="form-label" for="status">{{'index='+i}}</label>
+                            <input type="text" class="form-control" formControlName="skill" >
+                            <button type="button" (click)="removeSkill(i)" class="btn btn-outline-danger ml-2">-</button>
+                       </div>
+                    </div>
+                </div>
+                <button type="submit" (click)="saveDate(employeeForm)" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>
